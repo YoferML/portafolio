@@ -36,7 +36,7 @@ const DATA = {
       ],
       technologies: ["Python", "FastAPI", "Scikit-Fuzzy", "FISPRO", "Docker", "Render"],
       url: "https://clasificador-vidrio.onrender.com",
-      github: "https://github.com/clasificador-vidrio"
+      github: "https://github.com/YoferML/clasificador-vidrio"
     }
   ],
   training: [

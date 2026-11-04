@@ -1,0 +1,101 @@
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #334155;
+  --heading: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #4f46e5;
+  --chip-bg: #e0e7ff;
+  --chip-text: #3730a3;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1020; --surface: #131a2e; --text: #cbd5e1; --heading: #f1f5f9;
+    --muted: #94a3b8; --border: #27304a; --accent: #a5b4fc;
+    --chip-bg: #1e2748; --chip-text: #c7d2fe; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1020; --surface: #131a2e; --text: #cbd5e1; --heading: #f1f5f9;
+  --muted: #94a3b8; --border: #27304a; --accent: #a5b4fc;
+  --chip-bg: #1e2748; --chip-text: #c7d2fe; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Sans 3", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+.page { max-width: 720px; margin: 0 auto; padding: 56px 20px 40px; }
+h1, h2, h3 { color: var(--heading); line-height: 1.25; margin: 0; }
+p { margin: 0 0 12px; max-width: 68ch; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+.theme-toggle {
+  position: fixed; top: 16px; right: 16px;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 6px 12px; font: inherit; font-size: 0.9rem; cursor: pointer;
+}
+
+.hero { display: flex; gap: 24px; align-items: center; margin-bottom: 48px; }
+.avatar {
+  flex: none; width: 112px; height: 112px; border-radius: 50%;
+  object-fit: cover; background: var(--chip-bg); color: var(--chip-text);
+  display: grid; place-items: center; font-size: 2.2rem; font-weight: 700;
+}
+h1 { font-size: 2.1rem; font-weight: 700; }
+.role { color: var(--accent); font-weight: 600; font-size: 1.15rem; margin: 4px 0 2px; }
+.meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; }
+.links a { font-weight: 600; }
+
+.block { margin-bottom: 44px; }
+.block > h2 {
+  font-size: 1.3rem; padding-bottom: 8px; margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+.entry { margin-bottom: 18px; }
+.entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+h3 { font-size: 1.1rem; }
+
+.tech-group { margin-bottom: 16px; }
+.tech-group h3 { font-size: 0.98rem; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { background: var(--chip-bg); color: var(--chip-text); font-size: 0.88rem; font-weight: 600; padding: 3px 11px; border-radius: 999px; }
+
+.project { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 6px; padding: 20px; margin-bottom: 20px; }
+.project .chips { margin: 12px 0; }
+.details li { margin-bottom: 6px; font-size: 0.98rem; }
+.details strong { color: var(--heading); }
+.project-links { display: flex; gap: 18px; margin: 0; font-weight: 600; }
+
+.footer { color: var(--muted); font-size: 0.9rem; padding-top: 20px; border-top: 1px solid var(--border); }
+
+@media (max-width: 560px) {
+  .hero { flex-direction: column; align-items: flex-start; }
+  h1 { font-size: 1.7rem; }
+}
+
+/* Iconos */
+.icon { display: inline-flex; margin-right: 6px; }
+.links a, .project-links a { display: inline-flex; align-items: center; text-decoration: none; }
+.links a:hover, .project-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.loc { display: flex; align-items: center; }
+.chips li { display: inline-flex; align-items: center; gap: 6px; }
+.chips li i { font-size: 1rem; line-height: 1; }
+
+/* Botón de tema: solo icono */
+.theme-toggle { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; }
+.theme-toggle .icon { margin: 0; }
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+.chips li img { width: 16px; height: 16px; }

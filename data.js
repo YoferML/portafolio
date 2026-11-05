@@ -48,7 +48,7 @@ const DATA = {
     {
       title: "El Perceptrón",
       text: "Fundamentos matemáticos del modelo del Perceptrón.",
-      url: "assets/el_percentron.pdf", // Ruta a tu archivo PDF o enlace externo
+      url: "https://docs.google.com/gview?embedded=true&url=https://yoferml.github.io/portafolio/assets/el_percentron.pdf", // Ruta a tu archivo PDF o enlace externo
       image: "assets/portada_perceptron.jpg"
     }
   ]

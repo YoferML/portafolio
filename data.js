@@ -45,5 +45,10 @@ const DATA = {
   ],
   extra: [
     // { title: "Kaggle", text: "Describe aquí competencias, artículos o apuntes." }
+    {
+      title: "El Perceptrón",
+      text: "Fundamentos matemáticos del modelo del Perceptrón.",
+      url: "assets/el_perceptron.pdf" // Ruta a tu archivo PDF o enlace externo
+    }
   ]
 };

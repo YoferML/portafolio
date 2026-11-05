@@ -99,3 +99,38 @@ h3 { font-size: 1.1rem; }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
 .chips li img { width: 16px; height: 16px; }
+
+/* Configuración para Celulares / Pantallas Pequeñas (por defecto) */
+.extra-card {
+  display: flex;
+  flex-direction: column-reverse; /* La imagen queda arriba del texto en móvil */
+  gap: 1rem;
+}
+
+.extra-cover {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Configuración para Monitor / PC (pantallas mayores a 600px) */
+@media (min-width: 600px) {
+  .extra-card {
+    flex-direction: row; /* Coloca el texto a la izquierda y la imagen a la derecha */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .extra-content {
+    flex: 1;
+  }
+
+  .extra-cover {
+    width: 160px;
+    height: 110px;
+    max-height: none;
+    flex-shrink: 0;
+  }
+}

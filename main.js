@@ -130,17 +130,19 @@
   if (d.training.length) {
     app.append(section("Formación", d.training.map(entry)));
   }
-
-  if (d.extra.length) {
+//extra apuntes 
+if (d.extra.length) {
   app.append(section("Extra", d.extra.map((x) => 
-    el("div", { class: "entry" }, 
-      el("h3", {}, x.title), 
-      el("p", {}, x.text),
-      x.url ? el("p", { class: "project-links" }, link("Ver CONTENIDO", x.url, "file")) : null
+    el("div", { class: "entry extra-card" }, 
+      el("div", { class: "extra-content" },
+        el("h3", {}, x.title), 
+        el("p", {}, x.text),
+        x.url ? el("p", { class: "project-links" }, link("Ver CONTENIDO", x.url, "file")) : null
+      ),
+      x.image ? el("img", { src: x.image, alt: x.title, class: "extra-cover" }) : null
     )
   )));
 }
-
   app.append(el("footer", { class: "footer" }, "© " + new Date().getFullYear() + " " + d.name));
 
  

@@ -48,7 +48,8 @@ const DATA = {
     {
       title: "El Perceptrón",
       text: "Fundamentos matemáticos del modelo del Perceptrón.",
-      url: "assets/el_percentron.pdf" // Ruta a tu archivo PDF o enlace externo
+      url: "assets/el_percentron.pdf", // Ruta a tu archivo PDF o enlace externo
+      image: "assets/portada_perceptron.jpg"
     }
   ]
 };

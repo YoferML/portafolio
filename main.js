@@ -132,9 +132,14 @@
   }
 
   if (d.extra.length) {
-    app.append(section("Extra", d.extra.map((x) =>
-      el("div", { class: "entry" }, el("h3", {}, x.title), el("p", {}, x.text)))));
-  }
+  app.append(section("Extra", d.extra.map((x) => 
+    el("div", { class: "entry" }, 
+      el("h3", {}, x.title), 
+      el("p", {}, x.text),
+      x.url ? el("p", { class: "project-links" }, link("Ver CONTENIDO", x.url, "file")) : null
+    )
+  )));
+}
 
   app.append(el("footer", { class: "footer" }, "© " + new Date().getFullYear() + " " + d.name));
 

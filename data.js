@@ -42,7 +42,7 @@ const DATA = {
     date: "2026",
 
     description:
-        "Aplicación de Machine Learning para estimar el puntaje de taza de café a partir de características del grano verde.",
+    "Aplicación de Machine Learning para estimar el puntaje de taza de café a partir de características del grano verde. MAE: 1.56 · R²: 0.239.",
 
     technologies: [
         "Python",

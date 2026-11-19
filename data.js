@@ -1,5 +1,4 @@
-// Edita solo este archivo para cambiar el contenido del portafolio.
-// Las secciones con lista vacía no se muestran.
+// Editar solo este archivo para cambiar el contenido del portafolio.
 const DATA = {
   name: "Yofer Ticliahuanca Herrera",
   initials: "YT",
@@ -37,7 +36,48 @@ const DATA = {
       technologies: ["Python", "FastAPI", "Scikit-Fuzzy", "FISPRO", "Docker", "Render"],
       url: "https://clasificador-vidrio.onrender.com",
       github: "https://github.com/YoferML/clasificador-vidrio"
-    }
+    },
+    
+  {
+      title: "Estimador de puntaje SCA para café",
+      date: "2026",
+  
+      description:
+          "Aplicación de Machine Learning para estimar el puntaje de taza de café a partir de características del grano verde y atributos de origen.",
+  
+      details: [
+          {
+              label: "Datos",
+              text: "Dataset de Coffee Quality Institute (CQI) con 1309 lotes de café arábica, previamente limpiado y preparado en Python."
+          },
+          {
+              label: "Machine Learning",
+              text: "Se compararon modelos Ridge, Random Forest y Gradient Boosting mediante validación cruzada. El modelo seleccionado fue Random Forest Regressor, con MAE de 1.56 y R² de 0.239."
+          },
+          {
+              label: "Preprocesamiento",
+              text: "Imputación de valores faltantes, transformación One-Hot Encoding para variables categóricas y pipeline de Scikit-Learn."
+          },
+          {
+              label: "Despliegue",
+              text: "Modelo serializado en formato PKL e integrado en una aplicación interactiva desarrollada con Streamlit."
+          }
+      ],
+  
+      technologies: [
+          "Python",
+          "Pandas",
+          "NumPy",
+          "Scikit-Learn",
+          "Google Colab",
+          "Streamlit"
+      ],
+  
+      url: "https://sca-coffee-predictor.streamlit.app",
+  
+      github: "https://github.com/YoferML/sca-coffee-predictor"
+  }
+
   ],
   training: [
     { title: "Licenciatura en Matemática Pura", place: "Universidad Nacional de Piura", date: "2023 - En curso", description: "" },
